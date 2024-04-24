@@ -1,0 +1,42 @@
+
+.image-box{
+  display: flex;
+  flex-direction: column;
+  width: 820px;
+  background-position:left center;
+  background-size: auto;
+}
+.form-box{
+  margin-right: 150px;
+  display: flex;
+  flex-direction: column;
+  width: 400px;
+  height: 741px;
+  justify-content: center;
+  align-content: space-between;
+}
+.body-page{
+  display: flex;
+  width: 1500px;
+  height: 741px;
+  justify-content: space-between;
+
+}
+.Title{
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 35px;
+}
+.form-group{
+  display: flex;
+  flex-direction: column;
+  justify-items: space-between;
+  margin-bottom: 25px;
+}
+.btn.btn-primary{
+  width: 400px;
+  margin-top: 15px;
+}
+.form-group.form-check{
+  margin-bottom: 20px;
+}
