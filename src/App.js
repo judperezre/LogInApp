@@ -1,5 +1,7 @@
 import { Routes, Route, Outlet,} from "react-router-dom";
 import LoginForm from "./loginForm.jsx";
+import PokemonTable from './PokemonTable.jsx'; // Ajusta la ruta de importación si es necesario
+
 
 
 export default function App() {
@@ -12,6 +14,7 @@ export default function App() {
         <Routes>
           <Route path="/" element={<Layout/>}>
             <Route index element={<LoginForm/>}/>
+            <Route path="/pokemontable" element={<PokemonTable />}/>
           </Route>
         </Routes>
       </div>

@@ -3,13 +3,17 @@ import React, { useState } from 'react';
 import Swal from 'sweetalert2';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import ReCAPTCHA from "react-google-recaptcha"
+import { useNavigate } from 'react-router-dom';
+
 
 function LoginForm() {
+  const navigate = useNavigate();
   const [username, setUsername] = useState('');
   const [password, setPassword] = useState('');
   const [error, setError] = useState('');
   const [recaptchaValue, setRecaptchaValue] = useState('');
   const [loginAttempts, setLoginAttempts] = useState(0);
+  
   const handleChange = (value) => {
     setRecaptchaValue(value);
   };
@@ -32,6 +36,7 @@ function LoginForm() {
             icon: 'success',
             confirmButtonText: 'Ok'
         })
+        navigate("/pokemonTable")
     }else if(loginAttempts >= 5){
       Swal.fire({
         title: 'Error',
@@ -52,12 +57,12 @@ function LoginForm() {
   };
 
   return (
-    <div class = "body-page">
-      <div class ="image-box">
+    <div className = "body-page">
+      <div className ="image-box">
         <img src="https://familydoctor.org/wp-content/uploads/2018/02/41808433_l.jpg" alt="doctor.jpg" width="820px" height="750px" />
       </div>
-      <div class = "form-box"> 
-        <div class = "Title">
+      <div className = "form-box"> 
+        <div className = "Title">
             <h1>
              Iniciar sesión
             </h1>
@@ -88,8 +93,8 @@ function LoginForm() {
           />
         <div>
         </div>
-        <div class="col">
-          <a href="#!">¿Olvidó su contraseña?</a>
+        <div className="col">
+          <a href="https://www.google.com/">¿Olvidó su contraseña?</a>
         </div>
         </div>
         <div className="form-group form-check">
